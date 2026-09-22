@@ -59,6 +59,20 @@
   .black .muted,.black .lato-sm{color:var(--cream-70)}
   .sec-title{font-size:34px;margin-bottom:28px}
   .sec-lead{max-width:62ch;color:var(--muted);margin:-16px 0 32px}
+
+  /* blog */
+  .posts{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .post{border:1px solid var(--line);padding:26px 24px;display:grid;grid-template-rows:auto auto 1fr auto;gap:12px;text-decoration:none;color:inherit;transition:border-color .15s}
+  .post:hover{border-color:var(--lime)}
+  .post .tag{font-family:var(--lato);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--lime)}
+  .post h3{font-size:20px;line-height:1.3}
+  .post p{font-size:14px;line-height:1.7;color:var(--muted)}
+  .post .meta{font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
+  .post.feat{grid-column:span 3;grid-template-rows:auto auto auto auto}
+  .post.feat h3{font-size:clamp(24px,2.6vw,30px);max-width:26ch}
+  .post.feat p{max-width:70ch;font-size:15px}
+  @media (max-width:900px){.posts{grid-template-columns:1fr 1fr}.post.feat{grid-column:span 2}}
+  @media (max-width:560px){.posts{grid-template-columns:1fr}.post.feat{grid-column:span 1}}
   .split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
   @media (max-width:820px){.split{grid-template-columns:1fr;gap:28px}}
 
@@ -284,6 +298,7 @@
     <nav class="left" aria-label="Principal">
       <a href="#home" data-nav="home">Home</a>
       <a href="#solucoes" data-nav="solucoes">Soluções</a>
+      <a href="#blog" data-nav="blog">Blog</a>
       <a href="#sobre" data-nav="sobre">Sobre nós</a>
     </nav>
     <a class="sym" href="#home" aria-label="Obliant — início"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.2281 0.248884C9.32015 0.248884 2.84684 7.43586 1.8496 10.1046C-1.93408 20.2265 12.1095 17.0137 13.4851 16.6663C14.5968 16.345 15.0573 17.1844 13.7286 17.717C11.7986 18.5333 -0.793109 23.1471 1.3979 29.0952C1.7968 29.8564 3.16655 33.7582 9.22629 37.2142C12.262 38.9451 15.5588 39.9263 19.2897 39.9263C30.0394 39.9263 39.2992 31.211 39.2992 20.1339C39.2992 9.05676 30.0365 0.248884 19.2281 0.248884ZM8.07946 8.64864C9.78651 3.39228 17.1632 2.31264 19.2222 2.31264C21.2813 2.31264 26.2088 2.85101 29.8898 9.10597C29.8898 9.10597 4.87654 21.4017 8.07946 8.64575V8.64864ZM19.2926 37.8278C15.1629 37.6744 10.9392 35.7872 8.29357 30.7508C5.87672 26.7044 12.702 20.7736 19.0111 17.5202L31.0044 11.355C31.0191 11.3897 31.0338 11.4244 31.0484 11.4563C35.4656 22.5913 31.7876 38.288 19.2926 37.8278Z" fill="#FFFDF5"/></svg></a>
@@ -302,6 +317,7 @@
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#solucoes">Soluções</a></li>
+        <li><a href="#blog">Blog</a></li>
         <li><a href="#sobre">Sobre nós</a></li>
         <li><a href="#maturidade">Teste de maturidade</a></li>
         <li><a href="#contato">Falar com um especialista</a></li>
@@ -840,6 +856,84 @@
 </main>
 
 <!-- ================= SOBRE ================= -->
+<main data-page="blog">
+  <section class="black ihero">
+    <div class="wrap">
+      <span class="eyebrow">Blog</span>
+      <h1 style="margin-top:12px">O que aprendemos dentro dos projetos.</h1>
+      <p>Sem teoria de manual. O que trava uma implantação, o que faz uma equipe aderir, o que a diretoria precisa enxergar — escrito por quem está na operação.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="posts">
+
+        <a class="post feat" href="#contato">
+          <span class="tag">Gestão de mudança</span>
+          <h3>A maioria dos PMOs entrega cronograma. E o projeto atrasa do mesmo jeito.</h3>
+          <p>Processo organizado não muda comportamento. Enquanto as áreas continuarem trabalhando como sempre trabalharam, o relatório fica verde e a entrega não acontece. O que falta não é método — é gestão de mudança correndo junto.</p>
+          <span class="meta">Artigo · 6 min de leitura</span>
+        </a>
+
+        <a class="post" href="#contato">
+          <span class="tag">Conformidade</span>
+          <h3>Lei 14.457: o que muda para empresas com CIPA</h3>
+          <p>Canal de denúncia deixou de ser boa prática e virou obrigação. Quem precisa, o que o canal tem que garantir e o que costuma ser feito errado.</p>
+          <span class="meta">Artigo · 5 min</span>
+        </a>
+
+        <a class="post" href="#contato">
+          <span class="tag">ERP</span>
+          <h3>Implantação de ERP: os cinco pontos onde o cronograma estoura</h3>
+          <p>Não é a tecnologia. É dado sujo, decisão parada, fornecedor sem dono, equipe sem tempo e teste deixado para o fim.</p>
+          <span class="meta">Artigo · 7 min</span>
+        </a>
+
+        <a class="post" href="#contato">
+          <span class="tag">PMO</span>
+          <h3>Qual PMO a sua empresa precisa: executivo, de implantação ou ágil</h3>
+          <p>Os três resolvem problemas diferentes. Escolher o errado custa caro — e é o erro mais comum de quem monta o primeiro escritório de projetos.</p>
+          <span class="meta">Artigo · 6 min</span>
+        </a>
+
+        <a class="post" href="#contato">
+          <span class="tag">Governança</span>
+          <h3>Farol de projeto: como definir a cor sem achismo</h3>
+          <p>Farol que depende de quem preenche não serve para decidir. Um critério simples, com três variáveis, que a diretoria consegue conferir.</p>
+          <span class="meta">Artigo · 4 min</span>
+        </a>
+
+        <a class="post" href="#contato">
+          <span class="tag">Portfólio</span>
+          <h3>Os três indicadores que a diretoria precisa ver todo mês</h3>
+          <p>Relatório de vinte páginas não é governança. Três números respondem se o portfólio está no caminho — e cabem numa tela.</p>
+          <span class="meta">Artigo · 5 min</span>
+        </a>
+
+        <a class="post" href="#contato">
+          <span class="tag">Case</span>
+          <h3>Sete fornecedores, um único dia de virada</h3>
+          <p>Como uma operação com múltiplos fornecedores chegou ao go-live sem parar a produção — e o que foi combinado antes para que desse certo.</p>
+          <span class="meta">Case · 5 min</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="black quote-sec">
+    <div class="wrap">
+      <div class="quote">
+        <span class="eyebrow">Recebe por e-mail</span>
+        <h2>Um artigo por mês, sobre o que realmente trava projeto.</h2>
+        <p class="lato-sm">Sem newsletter genérica. Você recebe quando tiver algo que vale o seu tempo.</p>
+        <div class="btns" style="margin-top:24px"><a class="btn lime" href="#contato">Quero receber</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
 <main data-page="sobre">
   <section class="black ihero">
     <div class="wrap">
@@ -1006,7 +1100,7 @@
   <div class="wrap">
     <div class="cols">
       <div class="sym"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.2281 0.248884C9.32015 0.248884 2.84684 7.43586 1.8496 10.1046C-1.93408 20.2265 12.1095 17.0137 13.4851 16.6663C14.5968 16.345 15.0573 17.1844 13.7286 17.717C11.7986 18.5333 -0.793109 23.1471 1.3979 29.0952C1.7968 29.8564 3.16655 33.7582 9.22629 37.2142C12.262 38.9451 15.5588 39.9263 19.2897 39.9263C30.0394 39.9263 39.2992 31.211 39.2992 20.1339C39.2992 9.05676 30.0365 0.248884 19.2281 0.248884ZM8.07946 8.64864C9.78651 3.39228 17.1632 2.31264 19.2222 2.31264C21.2813 2.31264 26.2088 2.85101 29.8898 9.10597C29.8898 9.10597 4.87654 21.4017 8.07946 8.64575V8.64864ZM19.2926 37.8278C15.1629 37.6744 10.9392 35.7872 8.29357 30.7508C5.87672 26.7044 12.702 20.7736 19.0111 17.5202L31.0044 11.355C31.0191 11.3897 31.0338 11.4244 31.0484 11.4563C35.4656 22.5913 31.7876 38.288 19.2926 37.8278Z" fill="#192430"/></svg></div>
-      <div><div class="h">Empresa</div><a href="#home">Home</a><a href="#sobre">Sobre nós</a><a href="#solucoes">Soluções</a><a href="#maturidade">Teste de maturidade</a><a href="#governance">Canal de Ética</a></div>
+      <div><div class="h">Empresa</div><a href="#home">Home</a><a href="#sobre">Sobre nós</a><a href="#solucoes">Soluções</a><a href="#blog">Blog</a><a href="#maturidade">Teste de maturidade</a><a href="#governance">Canal de Ética</a></div>
       <div><div class="h">Soluções</div><a href="#digital">Obliant Digital</a><a href="#governance">Obliant Governance</a><a href="#legal">Obliant Legal</a><a href="#academy">Obliant Academy</a><a href="#tech">Obliant Tech</a></div>
       <div><div class="h">Contato</div><a href="#contato">Linkedin</a><a href="#contato">Instagram</a><a href="#contato">E-mail</a><p class="lato-sm" style="font-size:13px;margin-bottom:14px">Belo Horizonte, MG — Brasil</p><a class="btn outline thin" href="#contato" style="display:inline-block">Falar com um especialista</a></div>
     </div>
